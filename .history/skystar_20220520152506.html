@@ -1,0 +1,75 @@
+<!--
+ * @Author: zhaobo 1427246356@qq.com
+ * @Date: 2022-05-14 16:00:21
+ * @LastEditors: zhaobo 1427246356@qq.com
+ * @LastEditTime: 2022-05-20 15:24:25
+ * @FilePath: \onlyto\skystar.html
+ * @Description:  5.20表白
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>今晚，整片星空将为你一人闪烁</title>
+  <style>
+    #videofilm {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      z-index: -1;
+    }
+    #btn{
+      position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    }
+    h1 {
+      font-size: 36px;
+      color: #B1BCE6;
+      font-family: '楷体';
+    }
+  </style>
+  <link rel="stylesheet" href="css/skystar.css">
+</head>
+
+<body>
+  <button id="btn">播放</button>
+      <!-- video兼容问题太多了 -->
+  <video id="videofilm" poster="img/skystar2.jpg" autoplay loop autoplay="autoplay" controls="controls">
+    <source src="video/skystar.mp4" type="video/mp4">
+    <source src="video/skystar1.ogg" type="video/ogg">
+    <source src="video/skystar3.webm" type="video/webm">
+    <object data="video/skystar.mp4">
+      <embed src="video/skystar2.swf" />
+    </object>
+
+  </video>
+
+  <div class="textone">
+    <h1>look at the stars</h1>
+  </div>
+  <div class="text">
+    <h1>look how they shine for u</h1>
+  </div>
+
+  <div class="container"></div>
+  <script src="js/skystar.js"></script>
+  <script>
+    let btn = document.getElementById('btn');
+    let videofilm = document.getElementById('videofilm');
+    btn.addEventListener('click', function () {
+      if (videofilm.paused === true) {
+        videofilm.play();
+      } else {
+        videofilm.pause();
+      }
+    });
+
+  </script>
+</body>
+
+</html>

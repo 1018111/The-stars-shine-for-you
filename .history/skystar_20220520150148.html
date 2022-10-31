@@ -1,0 +1,64 @@
+<!--
+ * @Author: zhaobo 1427246356@qq.com
+ * @Date: 2022-05-14 16:00:21
+ * @LastEditors: zhaobo 1427246356@qq.com
+ * @LastEditTime: 2022-05-20 15:01:10
+ * @FilePath: \onlyto\skystar.html
+ * @Description:  5.20表白
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>今晚，整片星空将为你一人闪烁</title>
+  <style>
+    #videofilm {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      z-index: -1;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #B1BCE6;
+      font-family: '楷体';
+    }
+  </style>
+  <link rel="stylesheet" href="css/skystar.css">
+</head>
+
+<body>
+  <button id="btn">切换</button>
+  <video id="videofilm" poster="img/skystar2.jpg" autoplay muted loop autoplay="autoplay" >
+    <source src="video/skystar.mp4" type="video/mp4">
+  </video>
+
+  <!-- <div class="textone"> 
+    <h1>look at the stars</h1>
+  </div>
+  <div class="text">
+    <h1>look how they shine for u</h1>
+  </div>
+
+  <div class="container"></div>
+  <script src="js/skystar.js"></script> -->
+  <script>
+    let btn = document.getElementById('btn')
+      btn.on('click',function () {
+    if(video[0].paused === true){
+      video[0].play();
+      video.removeClass('aa_2').addClass('aa_1');
+    }else{
+      video[0].pause();
+      video.removeClass('aa_1').addClass('aa_2');
+    }
+  });
+
+  </script>
+</body>
+
+</html>
